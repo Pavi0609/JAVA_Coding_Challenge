@@ -1,0 +1,127 @@
+Output :
+
+===== Order Management System =====
+1. Create User
+2. Create Product (Admin only)
+3. Create Order
+4. Cancel Order
+5. Get All Products
+6. Get Orders by User
+7. Exit
+Enter your choice: 1
+
+--- Create New User ---
+Enter User ID: 104
+Enter Username: Mona_Lisa
+Enter Password: Mona@789
+Enter Role (Admin/User): Admin
+User created successfully!
+
+===========================================================================
+
+===== Order Management System =====
+1. Create User
+2. Create Product (Admin only)
+3. Create Order
+4. Cancel Order
+5. Get All Products
+6. Get Orders by User
+7. Exit
+Enter your choice: 2
+
+--- Create New Product ---
+Enter Admin User ID: 104
+Enter Product ID: 1005
+Enter Product Name: Mivi Airpods
+Enter Description: Wireless headphones without ANC
+Enter Price: 7999
+Enter Quantity in Stock: 20
+Enter Product Type (Electronics/Clothing): Electronics
+Enter Brand: Mivi
+Enter Warranty Period (months): 8
+Product created successfully!
+
+===========================================================================
+
+===== Order Management System =====
+1. Create User
+2. Create Product (Admin only)
+3. Create Order
+4. Cancel Order
+5. Get All Products
+6. Get Orders by User
+7. Exit
+Enter your choice: 3
+
+--- Create New Order ---
+Enter User ID: 104
+Enter Product ID to add to order (or 0 to finish): 1003
+Enter Product ID to add to order (or 0 to finish): 0
+Order created successfully!
+
+===========================================================================
+
+
+===== Order Management System =====
+1. Create User
+2. Create Product (Admin only)
+3. Create Order
+4. Cancel Order
+5. Get All Products
+6. Get Orders by User
+7. Exit
+Enter your choice: 4
+
+--- Cancel Order ---
+Enter User ID: 102
+Enter Order ID to cancel: 5003
+Order cancelled successfully!
+
+==========================================================================
+
+===== Order Management System =====
+1. Create User
+2. Create Product (Admin only)
+3. Create Order
+4. Cancel Order
+5. Get All Products
+6. Get Orders by User
+7. Exit
+Enter your choice: 5
+
+--- All Products ---
+ID: 1001, Name: OnePlus Nord, Price: 29999.0, Type: Electronics
+ID: 1002, Name: Cotton Kurta, Price: 1499.0, Type: Clothing
+ID: 1003, Name: Boat Headphones, Price: 3999.0, Type: Electronics
+ID: 1004, Name: Realme, Price: 3999.0, Type: Electronics
+ID: 1005, Name: Mivi Airpods, Price: 7999.0, Type: Electronics
+
+===========================================================================
+
+===== Order Management System =====
+1. Create User
+2. Create Product (Admin only)
+3. Create Order
+4. Cancel Order
+5. Get All Products
+6. Get Orders by User
+7. Exit
+Enter your choice: 6
+
+--- Orders by User ---
+Enter User ID: 104
+Orders for User ID 104:
+Product ID: 1003, Name: Boat Headphones, Price: 3999.0
+
+==================================================================================
+
+===== Order Management System =====
+1. Create User
+2. Create Product (Admin only)
+3. Create Order
+4. Cancel Order
+5. Get All Products
+6. Get Orders by User
+7. Exit
+Enter your choice: 7
+Exiting the system. Goodbye!

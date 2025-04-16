@@ -1,0 +1,63 @@
+SQL Implementation:
+
+CREATE DATABASE OrderManagement;
+USE OrderManagement;
+
+Product table:
+
+CREATE TABLE Product (
+    productId INT PRIMARY KEY,
+    productName VARCHAR(100) NOT NULL,
+    description TEXT,
+    price DECIMAL(10, 2) NOT NULL,
+    quantityInStock INT NOT NULL,
+    type VARCHAR(20) NOT NULL CHECK (type IN ('Electronics', 'Clothing'))
+);
+
+Electronics table:
+
+CREATE TABLE Electronics (
+    productId INT PRIMARY KEY,
+    brand VARCHAR(50) NOT NULL,
+    warrantyPeriod INT NOT NULL,
+    FOREIGN KEY (productId) REFERENCES Product(productId)
+);
+
+
+Clothing table:
+
+CREATE TABLE Clothing (
+    productId INT PRIMARY KEY,
+    size VARCHAR(10) NOT NULL,
+    color VARCHAR(20) NOT NULL,
+    FOREIGN KEY (productId) REFERENCES Product(productId)
+);
+
+User table:
+
+CREATE TABLE User (
+    userId INT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    role VARCHAR(10) NOT NULL CHECK (role IN ('Admin', 'User'))
+);
+
+Order table:
+
+CREATE TABLE Orders (
+    orderId INT AUTO_INCREMENT PRIMARY KEY,
+    userId INT NOT NULL,
+    orderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (userId) REFERENCES User(userId)
+);
+
+OrderItem table:
+
+CREATE TABLE OrderItem (
+    orderItemId INT AUTO_INCREMENT PRIMARY KEY,
+    orderId INT NOT NULL,
+    productId INT NOT NULL,
+    quantity INT DEFAULT 1,
+    FOREIGN KEY (orderId) REFERENCES Orders(orderId),
+    FOREIGN KEY (productId) REFERENCES Product(productId)
+);
